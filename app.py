@@ -1,5 +1,4 @@
 import os
-import gdown
 import streamlit as st
 import tensorflow as tf
 from PIL import Image, ImageOps
@@ -8,8 +7,10 @@ import numpy as np
 try:
     import gdown
 except ImportError:
+    import os
     os.system('pip install gdown')
     import gdown
+
 
 CLASS_LABELS = ['glioma', 'meningioma', 'notumor', 'pituitary']
 
